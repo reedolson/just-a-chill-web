@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  background: #000;
+  transition: background 0.5s, color 0.5s;
+  overflow-x: hidden;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+h1, h2 {
+  color: #ffdd57;
+  animation: floatText 2s infinite alternate;
+}
+
+p, ul {
+  font-size: 1.2rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li::before {
+  content: "⭐ ";
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  background: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 10px;
+  transition: transform 0.3s, background 0.3s ease;
+  box-shadow: 0 0 10px #ff6f61;
+}
+
+button:hover {
+  background: #ff3e3e;
+  transform: scale(1.05);
+}
+
+.glow-button {
+  box-shadow: 0 0 20px #ff6f61, 0 0 40px #ff6f61;
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.kitten {
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  margin: 20px 0;
+}
+
+#motivation {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffd700;
+  animation: fadeIn 1s ease;
+}
+
+.coming-soon {
+  font-style: italic;
+  color: #ffffffcc;
+  margin-top: 40px;
+  font-size: 1.1rem;
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+}
+
+#toggleMode {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.dark-mode {
+  background: #111;
+  color: #fff;
+}
+
+.dark-mode h1, .dark-mode h2 {
+  color: #00ffcc;
+}
+
+@keyframes floatText {
+  from { transform: translateY(0); }
+  to { transform: translateY(-5px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61; }
+  50% { box-shadow: 0 0 30px #ff6f61, 0 0 60px #ff6f61; }
+  100% { box-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61; }
+}
+

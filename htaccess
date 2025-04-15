@@ -1,0 +1,5 @@
+AddType audio/mp3 .mp3
+Header set X-Content-Type-Options "nosniff"
+Header set Content-Security-Policy "frame-ancestors 'none';"
+Header set Cache-Control "public, max-age=86400, no-cache, no-store"
+Header set Access-Control-Allow-Origin "*"
